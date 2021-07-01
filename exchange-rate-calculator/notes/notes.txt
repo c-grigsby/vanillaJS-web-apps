@@ -1,0 +1,53 @@
+Notes on JSON and the Fetch API
+
+//Fetch: an API (Application Programming Interface)
+
+Fetch: used to make HTTP requests from your backend to your frontend for data, or make requests from your frontend (like we will in this project) to your backend for data.
+
+You can also use Fetch to access third party API's (like the one used in this project) to return data to your application from an external source
+
+*Fetch is built into the browser!
+
+"get request" loading a webpage, getting data from a server
+
+"post request" posting data to a server (filling out a form, etc. )
+
+"put/patch request" updating data on a server 
+
+"delete request" deleting data from a server
+
+//Check Fetch and JSON crash course on YouTube
+
+//items.JSON 
+
+Before we make a request from an API, we can quickly make a request from a file as well
+
+//JSON
+
+JSON: 
+
+Very similar to an Object in JavaScript
+
+We have key value pairs inside of curly braces 
+
+ex. 
+
+{
+   "key": "String Value1", 
+   "key2": 4, 
+   "etc": ...  
+}
+
+or arrays 
+
+ex. 
+
+[
+    {"id": 1, "text": "Item One"}, 
+    {"id": 2, "text": "Item Two"}, 
+    {"id": 3, "text": "Item Three"}
+]
+
+//see file
+
+Note: understanding "status: " from a JSON response is very important
