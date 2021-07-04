@@ -2,8 +2,6 @@
 
 Retro 80's themed "guess my number" game
 
-[Live Demo](https://retro-guess-my-number-game.netlify.app)
-
 ## Project Specifications
 
 - DOM manipulation

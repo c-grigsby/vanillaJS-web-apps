@@ -1,6 +1,6 @@
 ## Pig Game
 
-Simulates a game of Pig... [Live Demo](https://pig-game-5.netlify.app/)
+Simulates a game of Pig...
 
 ## Instructions
 

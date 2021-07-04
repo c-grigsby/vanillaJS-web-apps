@@ -2,8 +2,6 @@
 
 Provides a modern website for a fictitous bank
 
-[Live Demo](https://bankify-website.netlify.app)
-
 ## Project Specifications
 
 - SPA Navigation

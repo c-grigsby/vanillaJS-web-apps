@@ -7,9 +7,9 @@ A collection of cool mini-projects developed with VanillaJS. No libraries or fra
 | 01  | [80's Guess My Number Game](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/80s-guess-my-number-game) |  [Live Demo](https://80s-guess-my-number-game.netlify.app)   |
 | 02  |            [Bank Website](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/bankist-website)            |       [Live Demo](https://bankify-website.netlify.app)       |
 | 03  |      [Custom Video Player](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/custom-video-player)       |   [Live Demo](https://custom-video-player-1.netlify.app/)    |
-| 04  |         [Fake Rich People](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/dom-array-methods)         |      [Live Demo](https://fake-rich-people.netlify.app/)      |
-| 05  | [Exchange Rate Calculator](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/exchange-rate-calculator)  | [Live Demo](https://exchange-rate-calculator-5.netlify.app/) |
-| 06  |          [Expense Tracker](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/expense-tracker)           |   [Live Demo](https://expense-tracker-app-5.netlify.app/)    |
+| 04  | [Exchange Rate Calculator](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/exchange-rate-calculator)  | [Live Demo](https://exchange-rate-calculator-5.netlify.app/) |
+| 05  |          [Expense Tracker](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/expense-tracker)           |   [Live Demo](https://expense-tracker-app-5.netlify.app/)    |
+| 06  |         [Fake Rich People](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/dom-array-methods)         |      [Live Demo](https://fake-rich-people.netlify.app/)      |
 | 07  |           [Form Validator](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/form-validator)            |     [Live Demo](https://form-validation-5.netlify.app/)      |
 | 08  |             [Hangman Game](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/hangman-game)              |       [Live Demo](https://hangman-game-2.netlify.app/)       |
 | 09  |        [Menu Slider Modal](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/menu-slider-modal)         |    [Live Demo](https://menu-slider-modal-3.netlify.app/)     |
