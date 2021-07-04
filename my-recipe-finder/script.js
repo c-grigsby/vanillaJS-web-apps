@@ -11,7 +11,7 @@ const singleMealEl = document.getElementById('single-meal');
 
 // Get JSON
 const getJSON = function (url, errorMsg = 'Something went wrong') {
-  return fetch(url).then(response => {
+  return fetch(url).then((response) => {
     if (!response.ok) {
       throw new Error(`${errorMsg} (${response.status})`);
     }
@@ -22,10 +22,10 @@ const getJSON = function (url, errorMsg = 'Something went wrong') {
 // Add multiple meals to the DOM
 const displayMeals = function (mealDataArr) {
   const innerHTML = [];
-  mealDataArr.forEach(mealData => {
+  mealDataArr.forEach((mealData) => {
     const string = mealData.meals
       .map(
-        meal => `
+        (meal) => `
   <div class="meal">
     <img src="${meal.strMealThumb}" alt=${meal.strMeal}>
     <div class="meal-info" data-mealID="${meal.idMeal}"> 
@@ -139,19 +139,30 @@ const addMealToDOM = function (meal) {
     }
     ${meal.strInstructions
       .split(';')
-      .map(item => `<p>${item}.</p>`)
+      .map((item) => `<p>${item}.</p>`)
       .join('')}
     </div>
     <h2>Ingredients</h2>
     <ul>
     ${recipeData
-      .map(item => `<li>${item.ingredient}: ${item.quantity}</li>`)
+      .map((item) => `<li>${item.ingredient}: ${item.quantity}</li>`)
       .join('')}
     </ul>
   </div>`;
   //Scroll to meal
   singleMealEl.scrollIntoView({ behavior: 'smooth' });
 };
+
+//Finds y value of given object
+function findPos(singleMealEl) {
+  var curtop = 0;
+  if (obj.offsetParent) {
+    do {
+      curtop += obj.offsetTop;
+    } while ((obj = obj.offsetParent));
+    return [curtop];
+  }
+}
 
 // Fetch meal by ID
 const getMealByID = async function (mealID) {
@@ -200,8 +211,8 @@ submitBtn.addEventListener('submit', searchMeal);
 // Random Meal Click
 randomBtn.addEventListener('click', getRandomMeal);
 // Get Recipe Click
-mealsEl.addEventListener('click', e => {
-  const mealInfo = e.path.find(item => {
+mealsEl.addEventListener('click', (e) => {
+  const mealInfo = e.path.find((item) => {
     // console.log('ITEM', item);
     if (item.classList) {
       return item.classList.contains('meal-info');
