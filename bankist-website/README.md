@@ -1,6 +1,6 @@
-## Bankist Website
+## Bankist Web App
 
-Provides a modern website for a fictitous bank
+This application is a modern website for a fictitous bank
 
 ## Project Specifications
 
