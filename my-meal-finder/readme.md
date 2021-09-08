@@ -1,12 +1,10 @@
-## Meal & Recipe Finder App
+## MealDB Application
 
-Search and generate random meals from the [themealdb.com](https://www.themealdb.com) API
+The application is a UI for the [The MealDB API](https://www.themealdb.com)
 
 ## Project Specifications
 
-- Display UI with form to search and button to generate
-- Connect to API and get meals
-- Display meals in DOM with image and hover effect
-- Click on meal and see the details for recipe
-- Click on generate button and fetch & display a random meal
-- Note: scrollIntoViewOptions for recipes not supported in Safari
+- UI to search and access recipes from the API
+- Display meals in the DOM with image and hover effect
+- Click on meal to see the details for a recipe
+- Click on generate button to fetch display a random meal

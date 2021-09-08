@@ -14,7 +14,7 @@ A collection of cool mini-projects developed with VanillaJS. No libraries or fra
 | 08  |             [Hangman Game](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/hangman-game)              |       [Live Demo](https://hangman-game-2.netlify.app/)       |
 | 09  |        [Menu Slider Modal](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/menu-slider-modal)         |    [Live Demo](https://menu-slider-modal-3.netlify.app/)     |
 | 10  |       [Movie Seat Booking](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/movie-seat-booking)        |    [Live Demo](https://movie-seat-booking-1.netlify.app/)    |
-| 11  |          [My Meal Finder](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/my-meal-finder)           |     [Live Demo](https://my-recipe-finder-9.netlify.app/)     |
+| 11  |             [ MealDB App](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/my-meal-finder)             |        [Live Demo](https://my-mealdb-app.netlify.app)        |
 | 12  |       [New Years Countdown](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/new-year-countdown)       |   [Live Demo](https://new-years-countdown-21.netlify.app/)   |
 | 13  |                 [Pig Game](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/pig-game)                  |         [Live Demo](https://pig-game-3.netlify.app/)         |
 | 14  |              [Relaxer App](https://github.com/grigsby9/vanillaJS-web-apps/tree/master/relaxer-app)               |       [Live Demo](https://relaxer-app-5.netlify.app/)        |
