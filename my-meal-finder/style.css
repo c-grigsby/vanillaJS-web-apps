@@ -23,6 +23,11 @@ body {
   display: flex;
 }
 
+.header {
+  display: flex;
+  margin: 15px;
+}
+
 input,
 button {
   border: 1px solid #dedede;

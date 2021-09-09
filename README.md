@@ -1,4 +1,4 @@
-## VanillaJS Web Apps
+# VanillaJS Web Apps
 
 A collection of cool mini-projects developed with VanillaJS. No libraries or frameworks.
 
