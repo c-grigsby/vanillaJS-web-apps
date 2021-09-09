@@ -11,8 +11,8 @@ const singleMealEl = document.getElementById('single-meal');
 // FUNCTIONS
 
 // Get JSON
-const getJSON = function (url, errorMsg = 'Something went wrong') {
-  return fetch(url).then((response) => {
+const getJSON = async function (url, errorMsg = 'Something went wrong') {
+  return await fetch(url).then((response) => {
     if (!response.ok) {
       throw new Error(`${errorMsg} (${response.status})`);
     }
