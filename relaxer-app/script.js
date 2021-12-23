@@ -2,9 +2,9 @@ const container = document.getElementById('container');
 const text = document.getElementById('text');
 
 // SET TIME
-const totalTime = 10000; //CSS must match values
-const breatheTime = (totalTime / 5) * 2; //4s
-const holdTime = totalTime / 5; //2s
+const totalTime = 8000; //CSS must match values
+const breatheTime = totalTime / 4 + 1000; //3s per breath = 6s
+const holdTime = totalTime / 4; //2s
 
 /////////////
 // FUNCTIONS
