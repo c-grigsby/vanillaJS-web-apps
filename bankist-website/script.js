@@ -12,7 +12,7 @@ const tabsContent = document.querySelectorAll('.operations__content');
 const nav = document.querySelector('.nav');
 const header = document.querySelector('.header');
 const allSections = document.querySelectorAll('.section');
-///////////////////////////////////////
+
 // Modal window
 const openModal = function (e) {
   e.preventDefault();
@@ -25,7 +25,7 @@ const closeModal = function () {
   overlay.classList.add('hidden');
 };
 
-btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
+btnsOpenModal.forEach((btn) => btn.addEventListener('click', openModal));
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
@@ -35,47 +35,25 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
-///////////////////////////////////////////
+
 // Scroll To
 btnScrollTo.addEventListener('click', function (e) {
   console.log('access');
   const s1coords = section1.getBoundingClientRect();
   section1.scrollIntoView({ behavior: 'smooth' });
 });
-/////////////////////////////////////////////
+
 // Page Navigation: Smooth Scrolling
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   console.log(e.target);
-  // Matching strategy
+  
   if (e.target.classList.contains('nav__link')) {
-    //console.log('LINK');
     e.preventDefault();
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
-///////////////////////////////////////////
-// Cookie Message
-// const header = document.querySelector('.header');
 
-// const message = document.createElement('div');
-// message.classList.add('cookie-message');
-// message.textContent =
-//   'We use cookies for improved functionality and analytics.';
-// message.innerHTML = `${message.textContent} <button class="btn btn--close-cookie">Got it!</button>`;
-
-// header.append(message);
-
-// document
-//   .querySelector('.btn--close-cookie')
-//   .addEventListener('click', function () {
-//     message.remove();
-//   });
-
-// Styles: for Cookie Message
-// message.style.backgroundColor = '#37383d';
-// message.style.width = '120%';
-////////////////////////////////////////
 // Tabbed component
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
@@ -84,8 +62,8 @@ tabsContainer.addEventListener('click', function (e) {
   if (!clicked) return;
 
   //Remove active classes
-  tabs.forEach(t => t.classList.remove('operations__tab--active'));
-  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+  tabs.forEach((t) => t.classList.remove('operations__tab--active'));
+  tabsContent.forEach((c) => c.classList.remove('operations__content--active'));
 
   // Activate tab
   clicked.classList.add('operations__tab--active');
@@ -95,7 +73,7 @@ tabsContainer.addEventListener('click', function (e) {
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add('operations__content--active');
 });
-///////////////////////////////////////////
+
 // Menu Fade Animation
 const handleHover = function (e, opacity) {
   if (e.target.classList.contains('nav__link')) {
@@ -103,16 +81,16 @@ const handleHover = function (e, opacity) {
     const siblings = link.closest('.nav').querySelectorAll('.nav__link');
     const logo = link.closest('.nav').querySelector('img');
 
-    siblings.forEach(el => {
+    siblings.forEach((el) => {
       if (el !== link) el.style.opacity = opacity;
     });
     logo.style.opacity = opacity;
   }
 };
 
-nav.addEventListener('mouseover', e => handleHover(e, 0.5));
-nav.addEventListener('mouseout', e => handleHover(e, 1));
-////////////////////////////////////////////
+nav.addEventListener('mouseover', (e) => handleHover(e, 0.5));
+nav.addEventListener('mouseout', (e) => handleHover(e, 1));
+
 // Sticky NavBar: Intersection Observer API
 const navHeight = nav.getBoundingClientRect().height;
 
@@ -130,7 +108,7 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight}px`, //the nav bar will appear 90px before the threshold is reached
 });
 headerObserver.observe(header);
-/////////////////////////////////////////////
+
 // Reveal Sections: Intersection Observer API
 const revealSection = function (entries, observer) {
   const [entry] = entries;
@@ -146,7 +124,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
 });
-////////////////////////////////////////////
+
 // Lazy Loading Images
 const imgTargets = document.querySelectorAll('img[data-src]');
 console.log(imgTargets);
@@ -171,8 +149,8 @@ const imgObserver = new IntersectionObserver(loadImg, {
   rootMargin: '200px',
 });
 
-imgTargets.forEach(img => imgObserver.observe(img));
-////////////////////////////////////////////
+imgTargets.forEach((img) => imgObserver.observe(img));
+
 // Slider
 const slider = function () {
   const slides = document.querySelectorAll('.slide');
@@ -182,9 +160,7 @@ const slider = function () {
 
   let curSlide = 0;
   const maxSlide = slides.length;
-  ///////////////////
-  // HelperFunctions
-
+  
   // Create the dots
   const createDots = function () {
     slides.forEach(function (_, index) {
@@ -199,7 +175,7 @@ const slider = function () {
   const activateDot = function (slide) {
     document
       .querySelectorAll('.dots__dot')
-      .forEach(dot => dot.classList.remove('dots__dot--active'));
+      .forEach((dot) => dot.classList.remove('dots__dot--active'));
 
     document
       .querySelector(`.dots__dot[data-slide="${slide}"]`)
@@ -260,5 +236,5 @@ const slider = function () {
       activateDot(slide);
     }
   });
-}; //slider function
+}; 
 slider();
