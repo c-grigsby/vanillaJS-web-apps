@@ -1,5 +1,4 @@
 'use strict';
-
 const wrongLettersEl = document.getElementById('wrong-letters');
 const wordEl = document.getElementById('word');
 const popup = document.getElementById('popup-container');
@@ -92,7 +91,6 @@ function showNotification() {
 window.addEventListener('keydown', e => {
   if (e.keyCode >= 65 && e.keyCode <= 90) {
     const letter = e.key;
-    console.log(letter);
 
     if (selectedWord.includes(letter) && !correctLetters.includes(letter)) {
       correctLetters.push(letter);
@@ -111,12 +109,10 @@ window.addEventListener('keydown', e => {
 
 // Event: Restart Game and Play Again
 playAgainBtn.addEventListener('click', () => {
-  // Empty Arrs
-  correctLetters.splice(0);
+  correctLetters.splice(0); // empty arr's
   wrongLetters.splice(0);
 
   selectedWord = words[Math.floor(Math.random() * words.length)];
-  console.log(selectedWord);
   displayWord();
   updateWrongLettersEl();
   updateFigure();

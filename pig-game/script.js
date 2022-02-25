@@ -1,6 +1,4 @@
 'use strict';
-
-//Selecting elements
 const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
 const score0El = document.querySelector('#score--0');
@@ -14,10 +12,9 @@ const current1El = document.getElementById('current--1'); //player 1 currentScor
 const total0El = document.getElementById('score--0'); //player 0 totalScore
 const total1El = document.getElementById('score--1'); //player 1 totalScore
 
-//Game Variables
 let currentScore, scores, activePlayer, playing;
 
-//Initialize New Game
+//Init New Game
 const init = function () {
   currentScore = 0;
   //finalScores array, index[0] = player 0, etc.
@@ -92,5 +89,5 @@ bttnNew.addEventListener('click', function () {
   document
     .querySelector(`.player--${activePlayer}`)
     .classList.remove('player--active'); //remove activePlayer display
-  init(); //newGame
+  init(); // new game
 });
