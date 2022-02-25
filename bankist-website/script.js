@@ -1,5 +1,4 @@
 'use strict';
-
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
@@ -105,7 +104,7 @@ const stickyNav = function (entries) {
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
-  rootMargin: `-${navHeight}px`, //the nav bar will appear 90px before the threshold is reached
+  rootMargin: `-${navHeight}px`, // nav bar will appear 90px before the threshold is reached
 });
 headerObserver.observe(header);
 
@@ -119,7 +118,7 @@ const revealSection = function (entries, observer) {
 };
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.15, //section is only revealed when it is 15% visible
+  threshold: 0.15, // only revealed when 15% visible
 });
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
@@ -223,12 +222,10 @@ const slider = function () {
   // Event Handlers
   btnRight.addEventListener('click', nextSlide);
   btnLeft.addEventListener('click', prevSlide);
-
   document.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowLeft') prevSlide();
     e.key === 'ArrowRight' && nextSlide();
   });
-
   dotContainer.addEventListener('click', function (e) {
     if (e.target.classList.contains('dots__dot')) {
       const { slide } = e.target.dataset;

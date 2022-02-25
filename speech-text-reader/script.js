@@ -1,5 +1,4 @@
 'use strict';
-
 const toggleBtn = document.getElementById('toggle');
 const textBox = document.getElementById('text-box');
 const closeBtn = document.getElementById('close');
