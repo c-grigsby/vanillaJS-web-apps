@@ -25,7 +25,6 @@ const closeModal = function () {
 };
 
 btnsOpenModal.forEach((btn) => btn.addEventListener('click', openModal));
-
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
@@ -34,18 +33,14 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
-
 // Scroll To
 btnScrollTo.addEventListener('click', function (e) {
   console.log('access');
   const s1coords = section1.getBoundingClientRect();
   section1.scrollIntoView({ behavior: 'smooth' });
 });
-
 // Page Navigation: Smooth Scrolling
 document.querySelector('.nav__links').addEventListener('click', function (e) {
-  console.log(e.target);
-  
   if (e.target.classList.contains('nav__link')) {
     e.preventDefault();
     const id = e.target.getAttribute('href');
@@ -56,17 +51,13 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 // Tabbed component
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
-
-  // Gaurd clause
+  // Guard clause
   if (!clicked) return;
-
-  //Remove active classes
+  // Remove active classes
   tabs.forEach((t) => t.classList.remove('operations__tab--active'));
   tabsContent.forEach((c) => c.classList.remove('operations__content--active'));
-
   // Activate tab
   clicked.classList.add('operations__tab--active');
-
   // Activate content area
   document
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
@@ -104,7 +95,7 @@ const stickyNav = function (entries) {
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
-  rootMargin: `-${navHeight}px`, // nav bar will appear 90px before the threshold is reached
+  rootMargin: `-${navHeight}px`, // nav bar appears 90px before the threshold is reached
 });
 headerObserver.observe(header);
 
@@ -130,15 +121,12 @@ console.log(imgTargets);
 
 const loadImg = function (entries, observer) {
   const [entry] = entries;
-
   if (!entry.isIntersecting) return;
   // Replace src with data-src
   entry.target.src = entry.target.dataset.src;
-
   entry.target.addEventListener('load', function () {
     entry.target.classList.remove('lazy-img');
   });
-
   observer.unobserve(entry.target);
 };
 
@@ -156,11 +144,10 @@ const slider = function () {
   const btnLeft = document.querySelector('.slider__btn--left');
   const btnRight = document.querySelector('.slider__btn--right');
   const dotContainer = document.querySelector('.dots');
-
   let curSlide = 0;
   const maxSlide = slides.length;
   
-  // Create the dots
+  // Create Dots
   const createDots = function () {
     slides.forEach(function (_, index) {
       dotContainer.insertAdjacentHTML(
@@ -175,7 +162,6 @@ const slider = function () {
     document
       .querySelectorAll('.dots__dot')
       .forEach((dot) => dot.classList.remove('dots__dot--active'));
-
     document
       .querySelector(`.dots__dot[data-slide="${slide}"]`)
       .classList.add('dots__dot--active');
