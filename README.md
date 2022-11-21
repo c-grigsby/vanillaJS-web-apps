@@ -1,9 +1,13 @@
+<div align="center">
+
+<img src="https://thk.kanzae.net/wp-content/uploads/2017/06/vanilla-js.png" height=150/>
+
 # VanillaJS Web Apps
 
 A collection of cool mini-projects and games developed with VanillaJS. No libraries or frameworks.
 
-|  #  |                                                     Project                                                      |                          Live Demo                           |
-| :-: | :--------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------: |
+|  #  |                                                      Project                                                      |                          Live Demo                           |
+| :-: | :---------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------: |
 | 01  | [80's Guess My Number Game](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/80s-guess-my-number-game) |  [Live Demo](https://80s-guess-my-number-game.netlify.app)   |
 | 02  |            [Bank Website](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/bankist-website)            |       [Live Demo](https://bankify-website.netlify.app)       |
 | 03  |      [Custom Video Player](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/custom-video-player)       |   [Live Demo](https://custom-video-player-1.netlify.app/)    |
@@ -21,3 +25,5 @@ A collection of cool mini-projects and games developed with VanillaJS. No librar
 | 15  |       [Speech Text Reader](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/speech-text-reader)        |    [Live Demo](https://speech-text-reader-1.netlify.app/)    |
 | 16  |              [Typing Game](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/typing-game)               |       [Live Demo](https://typing-game-34.netlify.app/)       |
 | 17  |               [Where am I?](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/where-am-I)               |        [Live Demo](https://where-am-i-8.netlify.app)         |
+
+</div>
