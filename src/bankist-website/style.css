@@ -1,5 +1,4 @@
-/* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
-
+/* The page is NOT responsive */
 :root {
   --color-primary: #5ec576;
   --color-secondary: #ffcb03;
@@ -100,7 +99,7 @@ p {
   color: #666;
 }
 
-/* This is BAD for accessibility! Don't do in the real world! */
+/* Not ideal for accessibility */
 button:focus {
   outline: none;
 }
@@ -181,14 +180,12 @@ img {
 
 .header__title {
   flex: 1;
-
   max-width: 115rem;
   display: grid;
   grid-template-columns: 3fr 2fr;
   row-gap: 3rem;
   align-content: center;
   justify-content: center;
-
   align-items: start;
   justify-items: start;
 }
@@ -316,8 +313,7 @@ h4 {
 
 .operations__content {
   display: none;
-
-  /* JUST PRESENTATIONAL */
+  /* PURELY PRESENTATIONAL */
   font-size: 1.7rem;
   padding: 2.5rem 7rem 6.5rem 7rem;
 }
@@ -378,8 +374,7 @@ h4 {
   height: 50rem;
   margin: 0 auto;
   position: relative;
-
-  /* IN THE END */
+  /* end */
   overflow: hidden;
 }
 
@@ -392,8 +387,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* THIS creates the animation! */
+  /* animation below */
   transition: transform 1s;
 }
 
