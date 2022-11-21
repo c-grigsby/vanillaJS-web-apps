@@ -1,5 +1,4 @@
 'use strict';
-// AsyncJS
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
@@ -35,14 +34,14 @@ const renderError = function (msg) {
   countriesContainer.style.opacity = 1;
 };
 
-const getJSON = function (url, errorMsg = 'Something went wrong') {
+const getJSON = async function (url, errorMsg = 'Something went wrong') {
   return fetch(url).then((response) => {
     if (!response.ok) throw new Error(`${errorMsg} (${response.status})`);
     return response.json();
   });
 };
 
-//Promisifying the geolocation API
+// Promisifying the geolocation API
 const getPosition = function () {
   return new Promise(function (resolve, reject) {
     navigator.geolocation.getCurrentPosition(resolve, reject);
@@ -61,16 +60,16 @@ const whereAmIAt = async function (country) {
 
     // Country data from REST API
     const countryData = await fetch(
-      `https://restcountries.eu/rest/v2/name/${dataGeo.country}`
+      `https://restcountries.com/v2/name/${dataGeo.country}`
     ).then((data) => data.json());
 
     // Neighbor Country data (from country code)
     const neighbor = countryData[0].borders[0];
     const neighborData = await fetch(
-      `https://restcountries.eu/rest/v2/alpha/${neighbor}`
+      `https://restcountries.com/v2/alpha/${neighbor}`
     ).then((data) => data.json());
 
-    // Display the data
+    // Display
     renderCountry(countryData[0], '', dataGeo.city);
     renderCountry(neighborData, 'neighbor');
   } catch (err) {
