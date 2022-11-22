@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-/* from Google Fonts 'Lato'*/
 
 * {
   box-sizing: border-box;
@@ -8,16 +7,16 @@
 body {
   background-color: #242333;
   color: #fff;
-  display: flex; /* auto center everthing horizontally, and vertically, defualt will be horizontally 'row'*/
-  flex-direction: column; /* moves flex vertically */
+  display: flex; 
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
-  height: 100vh; /* the whole view port */
+  height: 100vh; 
   font-family: 'Lato', sans-serif;
 }
 
 .movie-container {
-  margin: 20px 0; /* 20px top/bottom 0 left/right*/
+  margin: 20px 0; 
 }
 
 .movie-container select {
@@ -107,8 +106,8 @@ body {
   margin: 15px 0;
   transform: rotateX(-45deg);
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
-  /*0.7 will add the blur effect*/
 }
+
 p.text {
   margin: 5px 0;
 }

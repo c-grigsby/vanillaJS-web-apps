@@ -1,6 +1,4 @@
 'use strict';
-
-//Get elements from the DOM
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
@@ -44,7 +42,6 @@ function checkRequired(inputArr) {
     }
   });
 }
-
 // helper function to checkRequired
 function getFieldName(input) {
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
@@ -67,17 +64,15 @@ function checkLength(input, min, max) {
   }
 }
 
-//Check passwords match
 function checkPasswordsMatch(input1, input2) {
   if (input1.value !== input2.value) {
     showError(input2, 'Passwords do not match');
   }
 }
 
-//Event Listener
+
 form.addEventListener('submit', function (e) {
   e.preventDefault();
-
   checkRequired([username, email, password, password2]);
   checkLength(username, 3, 15);
   checkLength(password, 6, 25);
