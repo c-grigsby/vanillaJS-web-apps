@@ -7,7 +7,6 @@ const textArea = document.getElementById('text');
 const readBtn = document.getElementById('read');
 const main = document.querySelector('main');
 
-// Images
 const dataArr = [
   {
     image: './img/drink.jpg',
@@ -59,8 +58,6 @@ const dataArr = [
   },
 ];
 
-/////////////////////////////////////
-// FUNCTIONS
 
 // Init speech synth
 const message = new SpeechSynthesisUtterance();
@@ -85,12 +82,11 @@ const createBox = function (obj) {
     <p class="info">${text}</p>
   `;
   main.appendChild(box);
-
-  // Image Click
+  // image click
   box.addEventListener('click', () => {
-    setTextMessage(text); //call
-    speakText(); //call
-    box.classList.add('active'); //add blur effect
+    setTextMessage(text); 
+    speakText(); 
+    box.classList.add('active'); 
     setTimeout(() => box.classList.remove('active'), 800);
   });
 };
@@ -114,29 +110,21 @@ const setVoice = function (e) {
   message.voice = voices.find(voice => voice.name === e.target.value);
 };
 
-////////////////////////////////
-// Event Listeners
-
 // Voices changed
 speechSynthesis.addEventListener('voiceschanged', getVoices);
-
 // Toggle text box
 toggleBtn.addEventListener('click', () => textBox.classList.toggle('show'));
-
-// Close Button
+// Close bttn
 closeBtn.addEventListener('click', () => textBox.classList.remove('show'));
-
 // Select new voice
 voicesSelect.addEventListener('change', setVoice);
-
-// Read text button
+// Read text bttn
 readBtn.addEventListener('click', () => {
   setTextMessage(textArea.value);
   speakText();
 });
 
-///////////////////////////////
-// Init
+// @Init
 function init() {
   getVoices();
   dataArr.forEach(createBox);

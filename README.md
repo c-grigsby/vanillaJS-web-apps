@@ -24,6 +24,6 @@ A collection of cool mini-projects and games developed with VanillaJS. No librar
 | 14  |  [Retro Guess My Number Game](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/80s-guess-my-number-game)  |  [Live Demo](https://80s-guess-my-number-game.netlify.app)   |
 | 15  |         [Speech Text Reader](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/speech-text-reader)         |    [Live Demo](https://speech-text-reader-1.netlify.app/)    |
 | 16  |                [Typing Game](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/typing-game)                |       [Live Demo](https://typing-game-34.netlify.app/)       |
-| 17  |                [Where am I?](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/where-am-I)                 |        [Live Demo](https://where-am-i-8.netlify.app)         |
+| 17  |                [Where Am I?](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/where-am-I)                 |        [Live Demo](https://where-am-i-8.netlify.app)         |
 
 </div>

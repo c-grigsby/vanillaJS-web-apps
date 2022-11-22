@@ -1,5 +1,3 @@
-'use strict';
-
 const word = document.getElementById('word');
 const text = document.getElementById('text');
 const scoreEl = document.getElementById('score');
@@ -10,14 +8,12 @@ const settings = document.getElementById('settings');
 const settingsForm = document.getElementById('settings-form');
 const difficultySelect = document.getElementById('difficulty');
 
-// List of words for game
 const words = [
   'sigh',
   'tense',
   'airplane',
   'ball',
   'pies',
-  'pitch',
   'juice',
   'warlike',
   'bad',
@@ -25,26 +21,22 @@ const words = [
   'dependent',
   'steer',
   'silver',
-  'programming',
+  'highfalutin',
   'superficial',
   'quince',
   'eight',
   'feeble',
   'admit',
   'drag',
-  'loving',
-  'trust',
-  'java',
+  'loving'
 ];
 
-// Init word
+
 let randomWord;
-// Init score
 let score = 0;
-// Init time
 let time = 10;
 
-// Set difficulty to value in ls or medium
+// Set difficulty to value in local storage or medium
 let difficulty =
   localStorage.getItem('difficulty') !== null
     ? localStorage.getItem('difficulty')
@@ -63,16 +55,15 @@ text.focus();
 const timeInterval = setInterval(updateTime, 1000);
 
 // Generate random word from array
-const getRandomWord = () => {
+function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
-};
+}
 
 // Add word to DOM
-const addWordToDom = () => {
+function addWordToDOM() {
   randomWord = getRandomWord();
   word.innerHTML = randomWord;
-};
-addWordToDOM();
+}
 
 // Update score
 function updateScore() {
@@ -84,7 +75,6 @@ function updateScore() {
 function updateTime() {
   time--;
   timeEl.innerHTML = time + 's';
-
   if (time === 0) {
     clearInterval(timeInterval);
     // end game
@@ -102,17 +92,19 @@ function gameOver() {
   endgameEl.style.display = 'flex';
 }
 
-/////////////////////
+addWordToDOM();
+
 // Event Listeners
 
-// Check user input
-text.addEventListener('input', (e) => {
+// Typing
+text.addEventListener('input', e => {
   const insertedText = e.target.value;
 
   if (insertedText === randomWord) {
     addWordToDOM();
     updateScore();
-    // clear
+
+    // Clear
     e.target.value = '';
 
     if (difficulty === 'hard') {
@@ -126,11 +118,12 @@ text.addEventListener('input', (e) => {
     updateTime();
   }
 });
+
 // Settings btn click
 settingsBtn.addEventListener('click', () => settings.classList.toggle('hide'));
 
 // Settings select
-settingsForm.addEventListener('change', (e) => {
+settingsForm.addEventListener('change', e => {
   difficulty = e.target.value;
   localStorage.setItem('difficulty', difficulty);
 });
