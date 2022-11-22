@@ -76,7 +76,7 @@ const handleHover = function (e, opacity) {
 nav.addEventListener('mouseover', (e) => handleHover(e, 0.5));
 nav.addEventListener('mouseout', (e) => handleHover(e, 1));
 
-// @Sticky NavBar
+// @Sticky_NavBar
 const navHeight = nav.getBoundingClientRect().height;
 const stickyNav = function (entries) {
   const [entry] = entries;

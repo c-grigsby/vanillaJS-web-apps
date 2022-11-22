@@ -13,7 +13,7 @@
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
-  /* For sliding nav bar */
+  /* For sliding navbar */
   transition: transform 0.3s ease;
 }
 
@@ -44,7 +44,7 @@ nav .logo {
 
 nav .logo img {
   height: 75px;
-  border-radius: 50px; /* rounded image */
+  border-radius: 50px; 
 }
 
 nav ul {

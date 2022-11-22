@@ -20,7 +20,8 @@ body {
   margin: 0;
   overflow: hidden;
 }
-/* Adds a dark overlay  */
+
+/* Adds dark overlay  */
 body::after {
   content: '';
   position: absolute;
@@ -30,6 +31,7 @@ body::after {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 body * {
   z-index: 1;
 }

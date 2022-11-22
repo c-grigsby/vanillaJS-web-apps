@@ -7,38 +7,34 @@ const playAgainBtn = document.getElementById('play-button');
 const notification = document.getElementById('notification-container');
 const figureParts = document.querySelectorAll('.figure-part');
 
-// Come back to add a backend DB to this
 const words = [
   'application',
   'programming',
   'interface',
   'wizard',
   'javascript',
+  'performance',
 ];
 
-// Initialize Game
+// @Init
 let selectedWord = words[Math.floor(Math.random() * words.length)];
-console.log(selectedWord);
 const correctLetters = [];
 const wrongLetters = [];
 displayWord();
 
-// Show hidden word & checks for winner
 function displayWord() {
   const letters = [...selectedWord];
   wordEl.innerHTML = letters
     .map(
-      currLetter =>
+      (currLetter) =>
         `<span class="letter">${
           correctLetters.includes(currLetter) ? currLetter : ''
         }</span>`
-    ) //map
-    .join(''); //turn the arr into a string
-
+    )
+    .join('');
   checkForWinner();
 }
 
-// Check for winner
 function checkForWinner() {
   const innerWord = wordEl.innerText.replace(/\n/g, '');
   if (innerWord === selectedWord) {
@@ -47,17 +43,15 @@ function checkForWinner() {
   }
 }
 
-// Updates the result of wrong letters
 function updateWrongLettersEl() {
   wrongLettersEl.innerHTML = `
   ${wrongLetters.length > 0 ? '<p> Wrong </p>' : ''}
-  ${wrongLetters.map(letter => `<span>${letter}</span>`)}
+  ${wrongLetters.map((letter) => `<span>${letter}</span>`)}
   `;
   updateFigure();
   checkForLoser();
 }
 
-// Update figure
 function updateFigure() {
   figureParts.forEach((part, index) => {
     const errors = wrongLetters.length;
@@ -69,7 +63,6 @@ function updateFigure() {
   });
 }
 
-// Check for loser
 function checkForLoser() {
   if (wrongLetters.length === figureParts.length) {
     finalMessage.innerText = 'Unfortunately You Lost ☠️';
@@ -77,18 +70,16 @@ function checkForLoser() {
   }
 }
 
-// Show notification for repeated letters
+// Notification for repeated letters
 function showNotification() {
-  console.log('show notification');
   notification.classList.add('show');
-
   setTimeout(() => {
     notification.classList.remove('show');
-  }, 2000); //auto remove in 2 sec
+  }, 2000);
 }
 
-// Event: Keydown letter press
-window.addEventListener('keydown', e => {
+// Keydown Event
+window.addEventListener('keydown', (e) => {
   if (e.keyCode >= 65 && e.keyCode <= 90) {
     const letter = e.key;
 
@@ -107,11 +98,10 @@ window.addEventListener('keydown', e => {
   }
 });
 
-// Event: Restart Game and Play Again
+// Play Again
 playAgainBtn.addEventListener('click', () => {
-  correctLetters.splice(0); // empty arr's
+  correctLetters.splice(0);
   wrongLetters.splice(0);
-
   selectedWord = words[Math.floor(Math.random() * words.length)];
   displayWord();
   updateWrongLettersEl();

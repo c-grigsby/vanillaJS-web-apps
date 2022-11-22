@@ -138,7 +138,6 @@ input:focus {
 
 .single-meal ul li {
   border: 1px solid #ededed;
-  /* border-radius: 5px; */
   background-color: #fff;
   /* display: inline-block; */
   color: #4c6ca0;
@@ -165,7 +164,6 @@ input:focus {
 
 .link:hover {
   background-color: #dfdfdf;
-  /* font-size: 20px; */
 }
 
 .link a {
