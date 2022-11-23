@@ -1,27 +1,23 @@
 'use strict';
 const currencyEl_one = document.getElementById('currency-one');
-const currencyEl_two = document.getElementById('currency-two');
 const amountEl_one = document.getElementById('amount-one');
+const currencyEl_two = document.getElementById('currency-two');
 const amountEl_two = document.getElementById('amount-two');
 const rateEl = document.getElementById('rate');
 const swap = document.getElementById('swap');
 
-amountEl_one.value = null;
-
-const calculate = function () {
+const calculate = () => {
   const currency_one = currencyEl_one.value;
   const currency_two = currencyEl_two.value;
-  console.log(currency_one, currency_two);
-  //Exchange Rate API
-  fetch('https://open.exchangerate-api.com/v6/latest') 
+  // open access exchange rate API
+  fetch("https://open.exchangerate-api.com/v6/latest")
     .then(res => res.json())
     .then(data => {
-      const rate = data.rates[currency_two];
-      console.log(rate);
+      const rate = data.rates[currency_two] / data.rates[currency_one];
       rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
-      amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
+      amountEl_two.value = (amountEl_one.value * (rate)).toFixed(2);
     });
-};
+}
 
 currencyEl_one.addEventListener('change', calculate);
 amountEl_one.addEventListener('input', calculate);
@@ -33,5 +29,3 @@ swap.addEventListener('click', () => {
   currencyEl_two.value = temp;
   calculate();
 });
-
-calculate();
