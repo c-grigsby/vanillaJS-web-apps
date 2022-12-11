@@ -13,11 +13,11 @@ body {
   justify-content: center;
   max-height: 100vh;
   margin: 0;
-  background: #2a3439; 
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 h1 {
-  color: #fff;
+  color: #f8f8ff;
 }
 
 .screen {
