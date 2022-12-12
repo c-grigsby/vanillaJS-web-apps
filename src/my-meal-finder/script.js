@@ -62,7 +62,7 @@ const searchMeal = async function (e) {
       `https://www.themealdb.com/api/json/v1/1/filter.php?c=${term}`
     );
     if (mealData3.meals !== null) mealsArr.push(mealData3);
-    // filter by area
+    // filter by region
     const mealData4 = await getJSON(
       `https://www.themealdb.com/api/json/v1/1/filter.php?a=${term}`
     );
@@ -85,7 +85,7 @@ const searchMeal = async function (e) {
   }
 };
 
-// Class to work with the API format
+// Class to work with API format
 class recipeItem {
   constructor(ingredient, quantity) {
     this.ingredient = ingredient;
@@ -108,8 +108,8 @@ const addMealToDOM = function (meal) {
     }
   }
   for (let i = 0; i < ingredients.length; i++) {
-    let j = new recipeItem(ingredients[i], measurements[i]);
-    recipeData.push(j);
+    let recipe_item = new recipeItem(ingredients[i], measurements[i]);
+    recipeData.push(recipe_item);
   }
   // add meal data to DOM
   singleMealEl.innerHTML = `
@@ -121,7 +121,7 @@ const addMealToDOM = function (meal) {
       ${meal.strCategory ? `<p><i>${meal.strArea}</i></p>` : ''}
     </div>
     <div class="main">
-    ${meal.strYoutube ? `<h4>This Recipe Has A YouTube Video! </h4>` : ''}
+    ${meal.strYoutube ? `<h4>This recipe has a YouTube video! </h4>` : ''}
     ${
       meal.strYoutube
         ? `<div class="link"><a href=${meal.strYoutube}>YouTube</a></div>`
@@ -145,7 +145,7 @@ const addMealToDOM = function (meal) {
 
 // Finds y value of given object
 function findPos() {
-  var curtop = 0;
+  let curtop = 0;
   if (obj.offsetParent) {
     do {
       curtop += obj.offsetTop;

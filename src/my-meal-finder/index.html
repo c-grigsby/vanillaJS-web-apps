@@ -9,20 +9,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>CCU Recipe Finder</title>
+    <title>MealDB Recipe Finder</title>
     <script defer src="script.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <div>
-          <h1>CCU Recipe Finder</h1>
+        <div class="display-header">
+          <h1>Recipe Finder</h1>
+          <img src="./images/leaf.png" />
         </div>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/thumb/e/ef/Coastal_Carolina_Chanticleers_logo.svg/1200px-Coastal_Carolina_Chanticleers_logo.svg.png"
-          height="130"
-          alt="War Chicken"
-        />
       </div>
       <div class="flex">
         <form class="flex" id="submit">
@@ -40,7 +36,7 @@
         </button>
       </div>
 
-      <div id="result-heading"></div>
+      <div class="result-heading" id="result-heading"></div>
       <div class="meals" id="meals"></div>
       <div id="single-meal"></div>
     </div>
