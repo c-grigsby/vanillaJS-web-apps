@@ -19,7 +19,7 @@ A collection of cool mini-projects and games developed with VanillaJS. No librar
 | 09  |         [Menu Slider Modal](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/menu-slider-modal)         |    [Live Demo](https://menu-slider-modal-3.netlify.app/)     |
 | 10  |        [Movie Seat Booking](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/movie-seat-booking)        |    [Live Demo](https://movie-seat-booking-1.netlify.app/)    |
 | 11  |                  [Pig Game](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/pig-game)                  |         [Live Demo](https://pig-game-3.netlify.app/)         |
-| 12  |          [ Recipe Finder App](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/my-meal-finder)          |       [Live Demo](https://my-mealdb2-app.netlify.app)        |
+| 12  |          [ Recipe Finder App](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/my-meal-finder)          |       [Live Demo](https://my-mealdb-app.netlify.app)        |
 | 13  |       [New Years Countdown](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/new-year-countdown)        |   [Live Demo](https://new-years-countdown-21.netlify.app/)   |
 | 14  |               [Relaxer App](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/relaxer-app)               |       [Live Demo](https://relaxer-app-5.netlify.app/)        |
 | 15  | [Retro Guess My Number Game](https://github.com/c-grigsby/vanillaJS-web-apps/tree/master/src/80s-guess-my-number-game) |  [Live Demo](https://80s-guess-my-number-game.netlify.app)   |
